@@ -71,14 +71,27 @@ Phase 6  可视化报告  →  交互式 HTML 网页（可选）
 
 ## 安装
 
+### 第一次：从 GitHub 安装
+
+```bash
+git clone https://github.com/andyshi70/brian-trust.git
+mkdir -p ~/.hermes/skills
+cp -r brian-trust/SAB ~/.hermes/skills/
+rm -rf brian-trust    # 克隆的仓库用完即可删
+```
+
+### 已克隆本仓库（本地更新/启动）
+
 ```bash
 # 全局安装（推荐）
 mkdir -p ~/.hermes/skills
 cp -r SAB ~/.hermes/skills/
 
 # 或项目级安装：只对该项目内启动的 Hermes 会话生效
-cp -r SAB <项目根>/.hermes/skills/
+cp -r SAB <你的项目根>/.hermes/skills/
 ```
+
+**更新到最新版**：把本仓库 clone 后的 `SAB/` 再 cp 一次覆盖即可（改完 SKILL.md 后别忘了这步）。
 
 装完重启 Hermes，说「开智囊团」或输入 `/sab` 即可开始。
 
@@ -89,8 +102,6 @@ mkdir -p 00-我/decisions     # 在使用智囊团的项目根目录执行
 ```
 
 不建也能正常开会，只是不记录「上次行动卡结果」。
-
-> 已装过旧版（`advisory-board`）的话，先 `rm -rf ~/.hermes/skills/advisory-board` 再安装，避免两个版本同时触发。
 
 ## 许可
 
